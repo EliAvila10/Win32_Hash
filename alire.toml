@@ -3,7 +3,7 @@ description = ""
 version = "0.1.0-dev"
 
 authors = ["Private"]
-maintainers = [""]
+maintainers = ["Private <tumdespt@protonmail.com>"]
 maintainers-logins = ["EliAvila10"]
 licenses = "Apache-2.0"
 website = ""
