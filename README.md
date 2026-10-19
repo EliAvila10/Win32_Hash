@@ -10,7 +10,7 @@ and the README says exactly which ones.
 Status: this library has not had an external security audit. See Limitations.
 
 ## Contents
-> Features
+- **Features
 > Requirements
 > Build and run
 > Quick start
