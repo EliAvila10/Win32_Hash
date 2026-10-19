@@ -1,0 +1,28 @@
+with "config/win32_hash_config.gpr";
+
+project Win32_Hash is
+
+   for Source_Dirs use ("src", "config");
+   for Object_Dir use "obj/" & Win32_Hash_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("win32_hash.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-ffunction-sections", "-fdata-sections", "-gnatW8", "-flto", "-funroll-loops", "-gnatn", "-O3", "-gnata", "-gnatVa", "-gnatwa.X", "-gnatyaABbc-defhiIklM79nOprStux");
+   end Compiler;
+
+   package Binder is
+      for Switches ("ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+   package Linker is
+      for Switches ("ada") use ("-s", "-flto");
+   end Linker;
+
+end Win32_Hash;
+
