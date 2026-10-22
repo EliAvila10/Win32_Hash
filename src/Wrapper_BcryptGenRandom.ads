@@ -28,8 +28,8 @@ package Wrapper_BcryptGenRandom with SPARK_Mode is
    --  - If Status is 0, Buffer is proven to contain randomized data.
    --  - If Status fails, Buffer is guaranteed to be entirely zeroed out.
    procedure BcryptGenRandom_Public
-     (Buffer : out BUFFER_RNG; -- Cambiado a OUT
-      Status : out NTSTATUS)    -- Cambiado a OUT
+     (Buffer : out BUFFER_RNG; 
+      Status : out NTSTATUS)   
      with
        Global  => (Input  => Ada.Real_Time.Clock_Time),
        Depends => (Buffer => null,
